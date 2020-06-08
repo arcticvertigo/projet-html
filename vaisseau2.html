@@ -25,16 +25,7 @@
         width: 70%;
         color: black;
         }
-        .ope{
-            color: white;
-            background-color: rgb(58, 48, 145);
-            opacity: 0.8;
-            text-align: center;
-            padding: 20px;
-            margin-left: 150px;
-            margin-right: 150px;
-            
-        }
+
         
         .nava{
             color: white;
@@ -75,18 +66,22 @@
             text-align: center;
             display: flex;
             display: inline;
-            padding-left: 10px ;
+            padding-left: 50px ;
             text-decoration: none;
             color: white;
             font-size: large;
             margin-left: 50px;
         }
         
-        .pic{
+        .pic img{
             float:left;
             margin-left: 50px; 
+            transition-duration: 1s;
+            transition-delay: 0,3s;
         }
-        
+        .pic img:hover {
+            transform: rotate(45deg);
+        }
         header{
             padding: 10px;
         }
@@ -275,14 +270,14 @@
         </style>
         
         <head>
-            <title>GOROSA</title>
+            <title>Le vaisseau</title>
         
             <link rel="shortcut icon" href="planet.ico" />
         </head>
         <body >
             <header>
                 <div class="pic">
-                    <img src="plane.png"  height="200px" width="200px">                     
+                    <a href="project.html"><img src="plane.png"  height="200px" width="200px"></a>                     
                </div>
                 
                     <h1>The Amazing Place Of Gorosa</h1>  
