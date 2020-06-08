@@ -6,13 +6,7 @@
         background-repeat: no-repeat;
         background-size: cover;        
     }
-    .titles{
-        text-align: center;
-        font-variant: small-caps;
-        text-shadow: 4px 3px black;
-        font-size: xx-large;
-        color: whitesmoke;
-    }
+
     h1{
         text-align: center;
         margin-right: auto;
@@ -70,21 +64,6 @@
         font-size: large;
         
     }
-   
-    table{
-		width: 100%;
-		text-align: center;
-        font-variant: small-caps;
-	}
-
-    table, th, td {
-        border-collapse: collapse;
-		border: 1px solid whitesmoke;
-        padding-left: 10px;
-        padding-bottom: 3px;
-        padding-top: 3px;
-        padding-right: 10px;
-	}
 
 
     .tet img{
@@ -115,17 +94,18 @@
 
 
     #quiz, #results{
-        background-color: rgb(255, 150, 80);
+        background-color: rgba(255, 150, 80, 0.733);
         box-shadow: 3px 4px rgb(0, 0, 0);
         text-align: center;
         line-height: 50px;
     }
     #submit{        
         margin-top: 10px;
-        max-width: 1100px;
+        max-width: 1050px;
 		display: block;
         width: 100%;
         text-align: center;
+        opacity: 0.85;
     }
 
     #submit:hover{
@@ -133,11 +113,10 @@
     }
 
     .qfo{
-        opacity: 0.85;
 		box-sizing: border-box;
 		padding-left: 10px;
 		padding-right: 10px;
-		max-width: 1100px;
+		max-width: 1050px;
 		display: block;
 		margin-left:auto;
 		margin-right:auto;
@@ -158,9 +137,16 @@
         background-color: rgba(245, 245, 245, 0.603);
         text-align: center;
         text-shadow: 2px 1px whitesmoke;
+        margin-bottom: 50px;
+    }
+    .question{
+        font-weight: bold;
     }
 
-
+    #postu{
+        color: tomato;
+        
+    }
 </style>
 <head>
     
@@ -186,7 +172,7 @@
         <a href="****">Nouvelle planète</a>
         <a href="***">Faune et Flore</a>
         <a href="vaisseau2.html">Vaisseau</a>
-        <a href="fromulairespacial.html"><strong>POSTULEZ !</strong></a>
+        <a id="postu" href="fromulairespacial.html"><strong>POSTULEZ !</strong></a>
     </nav>
 
     <br><br><br><br><br>
@@ -235,7 +221,7 @@
             answers.push(
             `<label>
                 <input type="radio" name="question${questionNumber}" value="${letter}">
-                ${letter} :
+                ${letter}:
                 ${currentQuestion.answers[letter]}
                 
             </label>`
@@ -380,7 +366,7 @@
         }
 
         else{
-            resultsContainer.innerHTML = "Pas d'affectation";
+            resultsContainer.innerHTML = "pas d'affectation";
 
         }
     }
@@ -439,7 +425,7 @@
         a: "Construire une famille",
         b: "s'engager dans la conservation des savoirs humains",
         c: "construir les infrastructures du future",
-        d: "Découvrir la planète"
+        d: "découvrir la planète"
         },
         answer1:"d",
         answer2:"c",
