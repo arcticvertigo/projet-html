@@ -4,9 +4,7 @@
         background-position: 20%;
         background-image: url("from.JPG");
         background-repeat: no-repeat;
-        background-size: cover;
-
-        
+        background-size: cover;        
     }
     .titles{
         text-align: center;
@@ -61,17 +59,16 @@
         bottom: 0px;
         left: 10px;
         right: 10px;
-        
     }
     #navb a{
         text-align: center;
         display: flex;
         display: inline;
-        padding-left: 10px ;
+        padding-left: 50px ;
         text-decoration: none;
         color: white;
         font-size: large;
-    
+        
     }
    
     table{
@@ -106,6 +103,7 @@
     }
 
     .tapir{
+        margin-top: 10px;
         margin-left:600px;
         display: flex;
         opacity:0;
@@ -123,8 +121,8 @@
         line-height: 50px;
     }
     #submit{        
-        margin-top: 15px;
-        max-width: 1300px;
+        margin-top: 10px;
+        max-width: 1100px;
 		display: block;
         width: 100%;
         text-align: center;
@@ -134,16 +132,12 @@
         cursor: pointer;
     }
 
-    #submit:disabled{
-
-    }
-
     .qfo{
         opacity: 0.85;
 		box-sizing: border-box;
 		padding-left: 10px;
 		padding-right: 10px;
-		max-width: 1300px;
+		max-width: 1100px;
 		display: block;
 		margin-left:auto;
 		margin-right:auto;
@@ -153,13 +147,15 @@
     }
 
     #results{
-       
+        margin-top: 70px;
         text-align: center;
         font-size: large;
 
     }
 
     h3{
+        margin-top: 0px;
+        background-color: rgba(245, 245, 245, 0.603);
         text-align: center;
         text-shadow: 2px 1px whitesmoke;
     }
@@ -193,13 +189,15 @@
         <a href="fromulairespacial.html"><strong>POSTULEZ !</strong></a>
     </nav>
 
-    
-    <img class="tapir" src="tapir.png" height="70px" width="70px">
+    <br><br><br><br><br>
+
     
     <div class="qfo">
-        <h3>Faites ce QCM afin de savoir dans quelle sction vous pourriez éventuellement être pris.</h3>
+        <h3>Faites ce QCM afin de savoir dans quelle section vous pourriez éventuellement être pris.</h3>
         <div  id="quiz"></div>
+        <img class="tapir" src="tapir.png" height="70px" width="70px">
         <button id="submit">Répondre</button>
+
         <div id="results"></div>
     </div>
     <br><br><br><br><br>
@@ -232,13 +230,14 @@
 
         // and for each available answer...
         for(letter in currentQuestion.answers){
-
+            
             // ...add an HTML radio button
             answers.push(
             `<label>
                 <input type="radio" name="question${questionNumber}" value="${letter}">
                 ${letter} :
                 ${currentQuestion.answers[letter]}
+                
             </label>`
             );
         }
@@ -265,10 +264,10 @@
         let num2 = 0;
         let num3 = 0;
         let num4 = 0;
-        let num5 = 0;
 
         // for each question...
         myQuestions.forEach( (currentQuestion, questionNumber) => {
+           
 
         // find selected answer
         const answerContainer = answerContainers[questionNumber];
@@ -276,8 +275,6 @@
         var userAnswer = 0;
         userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
-        console.log(userAnswer)
-        console.log(currentQuestion)
         
         // if answer is correct
         if(userAnswer === currentQuestion.answer1){
@@ -299,99 +296,89 @@
             num4++;
         }
         
-        else if (userAnswer === currentQuestion.answer5)
-        {
-            num5++;
-        }
-
-        
-        
         });
 
        
         // show number of correct answers out of total
 
         if((num1==4 && num2==0 && num3==0 && num4==0) || (num1==3 && num2==0 && num3==1 && num4==0) || (num1==3 && num2==1 && num3==0 && num4==0) || (num1==3 && num2==0 && num3==0 && num4==1)){
-            resultsContainer.innerHTML = "Affectation 1: navigateur, affectation 2 : agronome";
+            resultsContainer.innerHTML = "Affectation 1 : navigateur, affectation 2 : agronome";
         }
         else if((num1==0 && num2==4 && num3==0 && num4==0) || (num1==0 && num2==3 && num3==1 && num4==0) || (num1==0 && num2==3 && num3==0 && num4==1)){
-            resultsContainer.innerHTML = "Affectation 1: explorateur de terrain, affectation 2 : maintenance spaciale";
+            resultsContainer.innerHTML = "Affectation 1 : explorateur de terrain, affectation 2 : maintenance spaciale";
         }
         else if((num1==0 && num2==0 && num3==4 && num4==0) || (num1==1 && num2==0 && num3==3 && num4==0) || (num1==0 && num2==0 && num3==3 && num4==1) || (num1==0 && num2==1 && num3==3 && num4==0)){
-            resultsContainer.innerHTML = "Affectation 1: médecin, affectation 2 : sécurité spaciale";
+            resultsContainer.innerHTML = "Affectation 1 : médecin, affectation 2 : sécurité spaciale";
         }
         else if((num1==0 && num2==0 && num3==0 && num4==4) || (num1==0 && num2==0 && num3==1 && num4==3) || (num1==0 && num2==1 && num3==0 && num4==3) || (num1==1 && num2==0 && num3==0 && num4==3)){
-            resultsContainer.innerHTML = "Affectation 1: navigateur, affectation 2 : explorateur de terrain";
+            resultsContainer.innerHTML = "Affectation 1 : navigateur, affectation 2 : explorateur de terrain";
         }
 
 
         else if(num1==1 && num2==1 && num3==0 && num4==2){
-            resultsContainer.innerHTML = "Affectation 1: agronome, affectation 2 : navigateur";
+            resultsContainer.innerHTML = "Affectation 1 : agronome, affectation 2 : navigateur";
         }
         else if(num1==1 && num2==0 && num3==1 && num4==2){
-            resultsContainer.innerHTML = "Affectation 1: agronome, affectation 2 : sécurité spaciale";
+            resultsContainer.innerHTML = "Affectation 1 : agronome, affectation 2 : sécurité spaciale";
         }
         else if(num1==0 && num2==1 && num3==1 && num4==2){
-            resultsContainer.innerHTML = "Affectation 1: maintenance spaciale, affectation 2 : navigateur";
+            resultsContainer.innerHTML = "Affectation 1 : maintenance spaciale, affectation 2 : navigateur";
         }
 
         else if(num1==1 && num2==0 && num3==2 && num4==1){
-            resultsContainer.innerHTML = "Affectation 1: médecin, affectation 2 : navigateur";
+            resultsContainer.innerHTML = "Affectation 1 : médecin, affectation 2 : navigateur";
         }
         else if(num1==1 && num2==1 && num3==2 && num4==0){
-            resultsContainer.innerHTML = "Affectation 1: médecin, affectation 2 : explorateur de terrain";
+            resultsContainer.innerHTML = "Affectation 1 : médecin, affectation 2 : explorateur de terrain";
         }
         else if(num1==0 && num2==1 && num3==2 && num4==1){
-            resultsContainer.innerHTML = "Affectation 1: sécurité spatiale, affectation 2 : agronome";
+            resultsContainer.innerHTML = "Affectation 1 : sécurité spatiale, affectation 2 : agronome";
         }
 
         else if(num1==1 && num2==1 && num3==1 && num4==1){
-            resultsContainer.innerHTML = "Affectation 1: navigateur, affectation 2 : explorateur de terrain";
+            resultsContainer.innerHTML = "Affectation 1 : navigateur, affectation 2 : explorateur de terrain";
         }
 
         else if(num1==2 && num2==2 && num3==0 && num4==0){
-            resultsContainer.innerHTML = "Affectation 1: explorateur de terrain, affectation 2 : navigateur";
+            resultsContainer.innerHTML = "Affectation 1 : explorateur de terrain, affectation 2 : navigateur";
         }
         else if(num1==2 && num2==0 && num3==2 && num4==0){
-            resultsContainer.innerHTML = "Affectation 1: médecin, affectation 2 : agronome";
+            resultsContainer.innerHTML = "Affectation 1 : médecin, affectation 2 : agronome";
         }
         else if(num1==2 && num2==0 && num3==0 && num4==2){
-            resultsContainer.innerHTML = "Affectation 1: agronome, affectation 2 : navigateur";
+            resultsContainer.innerHTML = "Affectation 1 : agronome, affectation 2 : navigateur";
         }
         else if(num1==0 && num2==2 && num3==0 && num4==2){
-            resultsContainer.innerHTML = "Affectation 1: explorateur de terrain, affectation 2 : maintenance spatiale";
+            resultsContainer.innerHTML = "Affectation 1 : explorateur de terrain, affectation 2 : maintenance spatiale";
         }
         else if(num1==0 && num2==2 && num3==2 && num4==0){
-            resultsContainer.innerHTML = "Affectation 1: médecin, affectation 2 : maintenance spatiale";
+            resultsContainer.innerHTML = "Affectation 1 : médecin, affectation 2 : maintenance spatiale";
         }
         else if(num1==0 && num2==0 && num3==2 && num4==2){
-            resultsContainer.innerHTML = "Affectation 1: sécurité spatiale, affectation 2 : agronome";
+            resultsContainer.innerHTML = "Affectation 1 : sécurité spatiale, affectation 2 : agronome";
         }
 
         
         else if(num1==2 && num2==1 && num3==1 && num4==0){
-            resultsContainer.innerHTML = "Affectation 1: navigateur, affectation 2 : sécurité spaciale";
+            resultsContainer.innerHTML = "Affectation 1 : navigateur, affectation 2 : sécurité spaciale";
         }
         else if(num1==2 && num2==1 && num3==0 && num4==1){
-            resultsContainer.innerHTML = "Affectation 1: agronome, affectation 2 : navigateur";
+            resultsContainer.innerHTML = "Affectation 1 : agronome, affectation 2 : navigateur";
         }
         else if(num1==2 && num2==0 && num3==1 && num4==1){
-            resultsContainer.innerHTML = "Affectation 1: navigateur, affectation 2 : médecin";
+            resultsContainer.innerHTML = "Affectation 1 : navigateur, affectation 2 : médecin";
         }
 
         else if(num1==1 && num2==2 && num3==0 && num4==1){
-            resultsContainer.innerHTML = "Affectation 1: explorateur de terrain, affectation 2 : agronome";
+            resultsContainer.innerHTML = "Affectation 1 : explorateur de terrain, affectation 2 : agronome";
         }
         else if(num1==1 && num2==2 && num3==1 && num4==0){
-            resultsContainer.innerHTML = "Affectation 1: maintenance spatiale, affectation 2 : médecin";
+            resultsContainer.innerHTML = "Affectation 1 : maintenance spatiale, affectation 2 : médecin";
         }
         else if(num1==0 && num2==2 && num3==1 && num4==1){
-            resultsContainer.innerHTML = "Affectation 1: explorateur de terrain, affectation 2 : sécurité spaciale";
+            resultsContainer.innerHTML = "Affectation 1 : explorateur de terrain, affectation 2 : sécurité spaciale";
         }
 
-        else if(num5==1){
-            resultsContainer.innerHTML = "Vous n'êtes pas le bienvenu à bord.";
-        }
         else{
             resultsContainer.innerHTML = "Pas d'affectation";
 
@@ -401,6 +388,8 @@
     const quizContainer = document.getElementById('quiz');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
+
+    
 
     const myQuestions = [
     {
@@ -423,12 +412,12 @@
         a: "être au contact de la nature",
         b: "résoudre des problème",
         c: "être au contact des gens",
-        d: "procrastiner"
+        d: "sortir de la routine"
         },
         answer1:"b",
         answer2:"a",
         answer3:"c",
-        answer5:"d"
+        answer4:"d"
     },
     {
         question: "Qui était votre idole enfant ?",
