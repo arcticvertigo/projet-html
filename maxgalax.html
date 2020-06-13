@@ -39,8 +39,6 @@
     z-index: 2;
 }
 
-/**/
-
 body{
     
     background-image: url("ciel.png");
@@ -52,12 +50,12 @@ body{
 html{
     font-variant: small-caps;
 }
-h1, h2{
+h1{
     text-align: center;
     width: 1000px;
     margin-right: auto;
     margin-top: 60px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     margin-left: auto;
     font-variant: small-caps;
     text-shadow: 3px 2px rgb(0, 0, 0);
@@ -149,9 +147,6 @@ header{
     z-index: 0;
 }
 
-/* Soleil
--------------------------------------------------------------- */
-
 #soleil {
     position: absolute;
     height: 270px;
@@ -161,9 +156,6 @@ header{
     margin-left: 134px;
     transition: 0.5s;
 }
-
-/* salusa secundus
--------------------------------------------------------------- */
 
 #salusasecundus{
     position: absolute;
@@ -211,9 +203,6 @@ header{
         to { -moz-transform: rotate(-180deg) translateY(-75px);}
     }
 
-/* tapiwin
--------------------------------------------------------------- */
-
 #tapiwin{
     position: absolute;
     width: 350px;
@@ -238,9 +227,9 @@ header{
 border-radius: 50%;
 
 position: absolute;
-width: 70px;
-height: 70px;
-margin-top: -19px;
+width: 55px;
+height: 55px;
+margin-top: -14px;
 margin-left: 33.5px;
 }
 
@@ -258,9 +247,6 @@ margin-left: 33.5px;
         from { -moz-transform: rotate(180deg) translateY(-100px);}
         to { -moz-transform: rotate(-180deg) translateY(-100px);}
     }
-
-/* gorosa
--------------------------------------------------------------- */
 
 #gorosa{
     position: absolute;
@@ -286,8 +272,8 @@ margin-left: 33.5px;
 border-radius: 50%;
 
 position: absolute;
-width: 80px;
-height: 80px;
+width: 70px;
+height: 70px;
 margin-top: -25px;
 margin-left: 33.5px;
 }
@@ -307,15 +293,13 @@ margin-left: 33.5px;
         to { -moz-transform: rotate(-180deg) translateY(-125px);}
     }
 
-/* Lune
--------------------------------------------------------------- */
 
 #lune{
     position: absolute;
-    width: 93px;
-    height: 93px;
-    margin-top: -31px;
-    margin-left: 23px;
+    width: 80px;
+    height: 80px;
+    margin-top: -27px;
+    margin-left: 28px;
 }
 
 #astre_lune{
@@ -327,8 +311,8 @@ margin-left: 33.5px;
     -webkit-animation: orbite_lune 1s linear infinite;
 	animation: orbite_lune 1s linear infinite;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
-    margin-top: 45px;
-    margin-left: 45px;
+    margin-top: 39px;
+    margin-left: 38px;
 }
 
     @-webkit-keyframes orbite_lune {
@@ -337,8 +321,8 @@ margin-left: 33.5px;
     }
 
     @keyframes orbite_lune {
-        from { transform: rotate(-180deg) translateY(47px);}
-        to { transform: rotate(180deg) translateY(47px);}
+        from { transform: rotate(-180deg) translateY(40px);}
+        to { transform: rotate(180deg) translateY(40px);}
     }
 
     @-moz-keyframes orbite_lune {
@@ -346,8 +330,6 @@ margin-left: 33.5px;
         to { -moz-transform: rotate(180deg) translateY(-11px);}
     }
 
-/* stultitia
--------------------------------------------------------------- */
 
 #stultitia{
     position: absolute;
@@ -393,10 +375,6 @@ height: 40px;
         from { -moz-transform: rotate(180deg) translateY(-150px);}
         to { -moz-transform: rotate(-180deg) translateY(-150px);}
     }
-
-
-/* lammamagnam
--------------------------------------------------------------- */
 
 #lammamagnam{
     position: absolute;
@@ -445,10 +423,7 @@ margin-left: 33.5px;
     }
 
 
-/* Informations Planètes
--------------------------------------------------------------- */
-
-.titre_info{
+.titre_info, #toto{
     position: absolute;
     cursor: pointer;
     font-size: 30px;
@@ -462,30 +437,40 @@ margin-left: 33.5px;
     transition: 0.5s;
 }
 
-/* Info Planète */
-#info_salusasecundus{
-    margin-top: 50px;margin-left: 850px;
-}
-#info_tapiwin{
-    margin-top: 100px;margin-left: 850px;
-}
-#info_gorosa{
-    margin-top: 150px;margin-left: 850px;
-}
-#info_stultitia{
-    margin-top: 200px;margin-left: 850px;
-}
-#info_lammamagnam{
-    margin-top: 250px;margin-left: 850px;
-}
-#info_soleil{
-    margin-top: 350px;margin-left: 850px;
-}
-#info_lune{
-    margin-top: 400px;margin-left: 850px;
+#toto{
+    margin-top: -50px;
+    margin-left: 800px;
 }
 
-/* Info Planète */
+#info_salusasecundus{
+    margin-top: 50px;
+    margin-left: 850px;
+}
+#info_tapiwin{
+    margin-top: 100px;
+    margin-left: 850px;
+}
+#info_gorosa{
+    margin-top: 150px;
+    margin-left: 850px;
+}
+#info_stultitia{
+    margin-top: 200px;
+    margin-left: 850px;
+}
+#info_lammamagnam{
+    margin-top: 250px;
+    margin-left: 850px;
+}
+#info_soleil{
+    margin-top: 350px;
+    margin-left: 850px;
+}
+#info_lune{
+    margin-top: 400px;
+    margin-left: 850px;
+}
+
 #info_salusasecundus:hover ~ #salusasecundus.orbite, #info_tapiwin:hover ~ #tapiwin.orbite, #info_gorosa:hover ~ #gorosa.orbite, #info_stultitia:hover ~ #stultitia.orbite, #info_lammamagnam:hover ~ #lammamagnam.orbite, #info_lune:hover ~ #gorosa #planete_gorosa #lune.orbite{
     border: 2px solid tomato;
     transition: 0.5s;
@@ -498,8 +483,6 @@ margin-left: 33.5px;
     margin-left: 124px;
     transition: 0.5s;
 }
-
-/* Cadres Informations Planètes */
 
 
 #cadre_salusasecundus, #cadre_tapiwin, #cadre_gorosa, #cadre_stultitia, #cadre_lammamagnam, #cadre_soleil, #cadre_lune{
@@ -539,7 +522,7 @@ margin-left: 33.5px;
 </style>
 
 <head>
-    <title>Système de </title>
+    <title>Système de Mu Lyrae</title>
 
     <link rel="shortcut icon" href="planet.ico" />
 </head>
@@ -572,29 +555,24 @@ margin-left: 33.5px;
 
     <h1>Le Systeme de Mu Lyrae</h1>
     
-    <p id="prez">Gorosa se situe dans une galaxie assez proche de la Voie lactée : la galaxie du cigare. Elle comprends beaucoup d’étoiles et d’astres, et parmi eux se trouve le système de Mu Lyrae, l’étoile autour de laquelle gravite Gorosa et 5 autres planètes, nommées par nos scientifiques, que nous allons vous faire découvrir rapidement. Le voici, ci-dessous. </p>
+    <p id="prez">Gorosa se situe dans une galaxie assez proche de la Voie lactée : la galaxie du cigare. Elle comprend beaucoup d’étoiles et d’astres, et parmi eux se trouve le système de Mu Lyrae, l’étoile autour de laquelle gravite Gorosa et 4 autres planètes, nommées par nos scientifiques, que nous allons vous faire découvrir. Le voici, ci-dessous. </p>
 
     <br><br><br><br><br>
 <div id="systeme_solaire">
 
-    <div id="info_soleil" class="titre_info">Mu Lyrae</div>
-    <div id="cadre_soleil"> Mu Lyrae est l'étoile qui donne vie à Gorosa. Elle a 2 milliards d'années. En tant qu'étoile orange, elle a une durée de vie très élevée et dégage très peu de radiations dangeureuses ou les rayons X au les ultra-violets. 
-    </div>
+    <p id="toto">Les astres du système:</p>
+
 
     <div id="info_salusasecundus" class="titre_info">Salusa Secus</div>
-    <div id="cadre_salusasecundus"> Salusa Secus est une petite planète peuplées d'une multitude de roches d'un bleu éclatant. Il a trompé nos scientifiques plus d'une fois, pensant qu'il s'agissait d'eau. Elle ne couvre aucune trace d'eau, ni de vie, mais de grands océans de gaz basiques.
+    <div id="cadre_salusasecundus"> Salusa Secus est une petite planète peuplées d'une multitude de roches d'un bleu éclatant. Il a trompé nos scientifiques plus d'une fois, pensant qu'il s'agissait d'eau. Elle ne couvre aucune trace d'eau, ni de vie, il n'y a que de grands océans de gaz basiques.
     </div>
     
     <div id="info_tapiwin" class="titre_info">Tapiwin</div>
-    <div id="cadre_tapiwin"> Tapiwin est une planète dont les mers sont faites de mercure et les continents de grandes étendues de bronze. On pense que la vie aurait pu exister là-bas il y a des millions d'années, avant l'arrivée du mercure, sans dpute apportée par une météorite.
+    <div id="cadre_tapiwin"> Tapiwin est une planète dont les mers sont faites de mercure et les continents de grandes étendues de bronze. On pense que la vie aurait pu exister là-bas il y a des millions d'années, avant l'arrivée du mercure, sans doute apportée par une météorite.
     </div>
 
     <div id="info_gorosa" class="titre_info">Gorosa</div>
-    <div id="cadre_gorosa">Gorosa est le grand but de notre voyage. Elle fait 50 000 km de diamètre et est à l'image de la Terre, dans le sens où sa température y est supportable et son atmosphère est constituée d'un oxigène à peine plus dense que le nôtre. Les océans y sont oranges, certainement du à la petite différence des éléments et de l'atmosphère, rendant le ciel et beaucoup d'autres choses orange également. Elle possède 2 ceintures d'astéroïdes qui maintiennent la gravité et permettent l'apparition d'îles folttant dans le ciel.
-    </div>
-    
-    <div id="info_lune" class="titre_info">Ad luna</div>
-    <div id="cadre_lune"> Ad luna est à Gorosa ce que la Luna est à la Terre. C'est un satellite naturel qui trône à 600 OOO km de Gorosa. Elle semble être aussi blanche que la lune, mais dont la surface serait recouverte de marbre.
+    <div id="cadre_gorosa">Gorosa est le grand but de notre voyage. Elle fait 50 000 km de diamètre et est à l'image de la Terre, dans le sens où sa température y est supportable et son atmosphère est constituée d'un oxygène à peine plus dense que le nôtre. Les océans y sont oranges, certainement du à la petite différence des éléments et de l'atmosphère, rendant le ciel et beaucoup d'autres choses orange également. Elle possède 2 ceintures d'astéroïdes qui maintiennent la gravité et permettent l'apparition d'îles folttant dans le ciel.
     </div>
     
     <div id="info_stultitia" class="titre_info">Stultitia</div>
@@ -602,14 +580,16 @@ margin-left: 33.5px;
     </div>
     
     <div id="info_lammamagnam" class="titre_info">Lamma Magnam</div>
-    <div id="cadre_lammamagnam"> Lamma Magna est une planète géante, où le vent est à environ 400km/h toute l'année. Cette durabilité et cet équilibre font que la vie à pu naitre. Elle n'est composée que de végéteaux qui poussent sur les souffles des vents. AInsi, cette planète parait verte. On ne sait absolument pas ce qui se trouve en dessous de ces plantes de vent. Ainsi, nous tardons de mieux connaître cette mystérieuse planète.
+    <div id="cadre_lammamagnam"> Lamma Magna est une planète géante, où le vent est à environ 400km/h toute l'année. Cette durabilité et cet équilibre ont à la vie de naitre. Elle n'est composée que de végéteaux qui poussent sur les souffles des vents, c'est pourquoi Lamma Magna parait verte. On ne sait absolument pas ce qui se trouve en dessous de ces plantes de vent. Ainsi, il nous tarde de mieux connaître cette mystérieuse planète.
+    </div>
+
+    <div id="info_soleil" class="titre_info">Mu Lyrae</div>
+    <div id="cadre_soleil"> Mu Lyrae est l'étoile qui donne vie à Gorosa. Elle a 2 milliards d'années. En tant qu'étoile orange, elle a une durée de vie très élevée et dégage très peu de radiations dangeureuses ou les rayons X au les ultra-violets. Elle est optimale.
     </div>
     
-    
-    
-<!-- 
-  Positionnement des astres du système solaire
--->
+    <div id="info_lune" class="titre_info">Ad luna</div>
+    <div id="cadre_lune"> Ad luna est à Gorosa ce que la Luna est à la Terre. C'est un satellite naturel qui trône à 600 OOO km de Gorosa. Elle semble être aussi blanche que la lune, mais dont la surface serait recouverte de marbre.
+    </div>
  
     <div id="soleil">
         <img alt="soleil" id="soleil" src="soleil.png"/>
@@ -643,10 +623,6 @@ margin-left: 33.5px;
         </div>
     </div>
     
-    
-    <div id="ceinture_asteroides"></div>
-    <div id="ceinture_asteroides1"></div>
-    
     <div id="lammamagnam" class="orbite">
         <div id="planete_lammamagnam">
             <img alt="lammamagnam" class="plane6" src="plane6.png"/>
@@ -663,6 +639,7 @@ margin-left: 33.5px;
     <a href=*****>Qui Sommes Nous ?</a>
     </p>
 </footer>
+
 <script>
            
 var a=0;
