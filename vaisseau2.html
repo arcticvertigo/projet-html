@@ -1,5 +1,7 @@
 <html>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
         body{
            
             background-image: url("shipo.png");
@@ -8,25 +10,45 @@
             background-position: top;
             
         }
-        
+        *{
+            margin:0;
+            padding:0;
+        }
+        #reseau:hover{
+            filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+        }
         html{
+            font-family: 'Noto Sans', sans-serif;
             font-variant: small-caps;
         }
-        h1, h2{
+        h1{
         text-align: center;
         width: 1000px;
         margin-right: auto;
         margin-top: 60px;
-        margin-bottom: 60px;
+        margin-bottom: 70px;
         margin-left: auto;
         font-variant: small-caps;
-        text-shadow: 3px 2px whitesmoke;
-        font-size: xx-large;
+        text-shadow: 4px 3px whitesmoke;
+        font-size: 50px;
         width: 70%;
         color: black;
         }
 
-        
+        h2{
+        text-align: center;
+        width: 1000px;
+        margin-right: auto;
+        margin-top: 60px;
+        margin-bottom: 70px;
+        margin-left: auto;
+        font-variant: small-caps;
+        text-shadow: 3px 3px whitesmoke;
+        font-size: 40px;
+        width: 70%;
+        color: black;
+        }
+
         .nava{
             color: white;
             background-color: rgb(58, 48, 145);
@@ -284,13 +306,11 @@
         
             </header>
             
-         
-            <br><br>
             <nav class="nava">
                     <a href="project.html">Accueil</a>
-                    <a href="***">Pourquoi nous accompagner ?</a>
+                    <a href="whyjoinus.html">Pourquoi nous accompagner ?</a>
                     <a href="maxgalax.html">Nouvelle galaxie</a>
-                    <a href="****">Nouvelle planète</a>
+                    <a href="planete.html">Nouvelle planète</a>
                     <a href="fauneflore.html">Faune et Flore</a>
                     <a id="vaiss" href="vaisseau2.html"><strong>Vaisseau</strong></a>
                     <a href="fromulairespacial.html"><strong>POSTULEZ !</strong></a>
@@ -386,9 +406,9 @@
         <br><br><br><br><br>
             <footer id="navb"> 
                 <p>Contactez nous:
-                <a href="https://www.facebook.com/iris.hubert.37"><img src="fb.png" height="30px" width="30px"></a>
-                <a href="https://www.instagram.com/arcticvertigo/"><img src="insta.png"height="30px" width="30px"></a>
-                <a href=*****>Qui Sommes Nous ?</a>
+                <a href="https://www.facebook.com/iris.hubert.37"><img id="reseau" src="fb.png" height="30px" width="30px"></a>
+                <a href="https://www.instagram.com/calciphil/"><img id="reseau" src="insta.png"height="30px" width="30px"></a>
+                <a href="thewho.html">Qui Sommes Nous ?</a>
                 </p>
             </footer>
         

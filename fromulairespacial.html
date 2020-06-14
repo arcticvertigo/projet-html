@@ -1,7 +1,9 @@
 <html>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
     html{
+        font-family: 'Noto Sans', sans-serif;
         font-variant: small-caps;
     }
     body{
@@ -10,16 +12,39 @@
         background-repeat: no-repeat;
         background-size: cover;        
     }
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    #reseau:hover{
+        filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+    }
 
     h1{
+        padding: 10px;
         text-align: center;
+        width: 1000px;
         margin-right: auto;
         margin-top: 60px;
-        margin-bottom: 60px;
+        margin-bottom: 70px;
         margin-left: auto;
         font-variant: small-caps;
         text-shadow: 4px 3px whitesmoke;
-        font-size: xx-large;
+        font-size: 50px;
+        width: 70%;
+        color: black;
+    }
+    h2{
+        text-align: center;
+        width: 1000px;
+        margin-right: auto;
+        margin-top: 60px;
+        margin-bottom: 70px;
+        margin-left: auto;
+        font-variant: small-caps;
+        text-shadow: 3px 3px whitesmoke;
+        font-size: 40px;
         width: 70%;
         color: black;
     }
@@ -72,7 +97,7 @@
 
     .tet img{
         float:left;
-        margin-left: 40px;
+        margin-left: 50px;
         transition-duration: 1s;
         transition-delay: 0,3s;
     }
@@ -105,7 +130,7 @@
     }
     #submit{  
         font-variant: small-caps;      
-        margin-top: 10px;
+  
         max-width: 1050px;
 		display: block;
         width: 100%;
@@ -137,11 +162,10 @@
 
     }
 
-    h3{
+    #po3{
         margin-top: 0px;
         background-color: rgba(245, 245, 245, 0.603);
         text-align: center;
-        text-shadow: 2px 1px whitesmoke;
         margin-bottom: 50px;
     }
     .question{
@@ -166,25 +190,25 @@
                        
         </div>
 
-            <h1 style="line-height: 50px;">Tentez Votre Chance Et Lancez-Vous Dans L'Aventure</h1>
+            <h1 style="line-height: 50px;">The Amazing Palce Of Gorosa</h1>
 
     </header>
-    <br><br><br>
+
     <nav class="nava">
         <a href="project.html">Accueil</a>
-        <a href="***">Pourquoi nous accompagner ?</a>
-        <a id="gal" href="maxgalax.html">Nouvelle galaxie</a>
-        <a href="****">Nouvelle planète</a>
+        <a href="whyjoinus.html">Pourquoi nous accompagner ?</a>
+        <a href="maxgalax.html">Nouvelle galaxie</a>
+        <a href="planete.html">Nouvelle planète</a>
         <a href="fauneflore.html">Faune et Flore</a>
         <a href="vaisseau2.html">Vaisseau</a>
         <a id="postu" href="fromulairespacial.html"><strong>POSTULEZ !</strong></a>
     </nav>
 
-    <br><br><br><br><br>
+    <h2>Tentez Votre Chance Et Lancez-Vous Dans L'Aventure</h2>
 
     
     <div class="qfo">
-        <h3>Faites ce QCM afin de savoir dans quelle section vous pourriez éventuellement être pris.</h3>
+        <p id="po3">Afin de postuler, vous n'avez qu'à nous envoyer votre candidature par les réseaux sociaux via <a href="https://www.facebook.com/iris.hubert.37">facebook</a> ou <a href="https://www.instagram.com/calciphil/">instagram</a>, ou alors par mail : <a href="mailto:gravisore@gmail.com">gravisore@gmail.com</a>. Elle devra contenir votre CV ainsi qu'une brève lettre de motivation. Il nous tarde de vous voir dans notre équipe !<br><br><strong>ce QCM afin de savoir dans quelle section vous pourriez éventuellement être pris.</strong></p>
         <div  id="quiz"></div>
         <img class="tapir" src="tapir.png" height="70px" width="70px">
         <button id="submit">Répondre</button>
@@ -194,9 +218,9 @@
     <br><br><br><br><br>
     <footer id="navb"> 
         <p>Contactez nous:
-        <a href="https://www.facebook.com/iris.hubert.37"><img src="fb.png" height="30px" width="30px"></a>
-        <a href="https://www.instagram.com/arcticvertigo/"><img src="insta.png"height="30px" width="30px"></a>
-        <a href=*****>Qui Sommes Nous ?</a>
+        <a href="https://www.facebook.com/iris.hubert.37"><img id="reseau" src="fb.png" height="30px" width="30px"></a>
+        <a href="https://www.instagram.com/calciphil/"><img id="reseau" src="insta.png"height="30px" width="30px"></a>
+        <a href="thewho.html">Qui Sommes Nous ?</a>
         </p>
     </footer>
 	
